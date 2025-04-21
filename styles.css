@@ -163,15 +163,15 @@ button {
 /* Tablero del juego */
 .tablero {
     display: grid;
-    grid-template-columns: repeat(3, 100px);
+    grid-template-columns: repeat(3, 80px);
     gap: 10px;
     justify-content: center;
     margin-top: 20px;
 }
 
 .carta img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 10px;
     border: 2px solid #ccc;
 }
@@ -182,7 +182,7 @@ button {
   
 /* Tablero del juego intermedio*/
 .tablero.intermedio {
-    grid-template-columns: repeat(4, 100px); 
+    grid-template-columns: repeat(4, 80px); 
     gap: 10px;
     justify-content: center;
     margin-top: 20px;
@@ -190,7 +190,7 @@ button {
 
 /* Tablero del juego avanzado*/
 .tablero.avanzado {
-    grid-template-columns: repeat(4, 100px); 
+    grid-template-columns: repeat(4, 80px); 
     gap: 10px;
     justify-content: center;
     margin-top: 20px;
