@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Memoria</title>
+    <!-- Importar la tipografía Fredoka One desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Pantalla de inicio -->
+    <div id="inicio" class="screen">
+        <h1>Neuroplay</h1>
+        <img src="img/logo.PNG" alt="Logo" class="logo">
+        <button onclick="goToDatos()">Iniciar</button>
+    </div>
+
+
+	<!-- Pantalla de datos (nombre y edad) -->
+	<div id="datos" class="screen" style="display: none;" aria-label="Pantalla para ingresar tus datos">
+		<h1 id="titulo-datos">Ingresa tus datos para jugar</h1>
+
+		<label for="nombre">¿Cómo te llamas?</label><br>
+		<input type="text" id="nombre" placeholder="Nombre" aria-labelledby="titulo-datos" aria-required="true">
+		<button type="button" onclick="dictarNombre()" aria-label="Decir tu nombre con la voz">🎤</button><br><br>
+
+		<label for="edad">¿Cuántos años tienes?</label><br>
+		<input type="number" id="edad" placeholder="Edad" aria-required="true">
+		<button type="button" onclick="dictarEdad()" aria-label="Decir tu edad con la voz">🎤</button><br><br>
+
+		<button onclick="goToJuego()" aria-label="Comenzar el juego con los datos ingresados">Continuar</button>
+	</div>
+
+    <!-- Pantalla de juego -->
+    <div id="juego" class="screen" style="display: none;">
+        <h1>Juego de Memoria</h1>
+        <img src="img/FondoGato.PNG" alt="gato" class="imagen-gato">
+        <button onclick="goToNiveles()">Comenzar</button>
+    </div>
+
+    <!-- Pantalla de niveles -->
+    <div id="niveles" class="screen" style="display: none;">
+        <h1>Selecciona un nivel</h1>
+        <div class="botones-niveles">
+            <button onclick="iniciarJuegoFacil()">Fácil</button>
+            <button onclick="iniciarJuegoIntermedio()">Intermedio</button>
+            <button onclick="iniciarJuegoAvanzado()">Avanzado</button>
+        </div>
+    </div>
+    <!-- Pantalla de juego fácil -->
+    <div id="memoria-facil" class="screen" style="display: none;">
+        <h1>Juego Fácil</h1>
+        <div id="tablero-facil" class="tablero"></div>
+        <button onclick="goToNiveles()">Volver a niveles</button>
+    </div>
+    <!-- Pantalla de victoria -->
+    <div id="pantalla-victoria" class="screen" style="display: none;">
+        <h1>🎉 ¡Felicidades!</h1>
+        <p>Has completado el nivel.</p>
+        <button onclick="goToNiveles()">Volver a niveles</button>
+    </div>
+	<!-- Pantalla de juego Medio -->
+    <div id="memoria-intermedio" class="screen" style="display: none;">
+		<h1>Juego Intermedio</h1>
+		<div id="tablero-intermedio" class="tablero intermedio"></div>
+		<button onclick="goToNiveles()">Volver a niveles</button>
+	</div>
+	<!-- Pantalla de juego Avanzado -->
+	<div id="memoria-avanzado" class="screen" style="display: none;">
+		<h1>Juego Avanzado</h1>
+		<div id="tablero-avanzado" class="tablero avanzado"></div>
+		<button onclick="goToNiveles()">Volver a niveles</button>
+	</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
