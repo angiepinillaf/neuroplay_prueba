@@ -86,7 +86,7 @@ function iniciarJuegoIntermedio() {
 }
 //funcion juego intermedio 
 function iniciarJuegoAvanzado() {
-    const imagenesAvanzado = ['banano.jpg', 'manzana.jpg', 'sandia.png', 'naranja.jpg', 'pera.jpg', 'uva.png', 'kiwi.jpg', 'mango.png', 'piña.png', 'papaya.png'];
+    const imagenesAvanzado = ['banano.jpg', 'manzana.jpg', 'sandia.png', 'naranja.jpg', 'pera.jpg', 'uva.png', 'kiwi.png', 'mango.png', 'piña.png', 'papaya.png'];
     iniciarJuegoMemoria('avanzado', imagenesAvanzado);
 }
 
